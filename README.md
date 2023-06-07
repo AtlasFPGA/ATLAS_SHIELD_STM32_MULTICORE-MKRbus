@@ -9,15 +9,14 @@ https://es.aliexpress.com/item/4000059515638.html?pdp_npi=2%40dis%21EUR%211%2C16
 
 
 Las STM32 que se han usado son 2 modelos para el presente diseño SHIELD MULTICORE STM32:
-Los modelos escogidos son el mismo que se usa en Muticore-II/UnAMIGA, pero en la versión de Victor Trucco, con una sóla SD, el modelo de tener microcontroladores o SBCs en el futuro es válido para futuros SHIELD MULTICORE que puedan aparecer con esta interconexión, al incorporar de esta forma la unión FPGA-SD-MICRO FPGA-SD-SBC, estamos en un puro derivado de MiST.
+Los modelos escogidos son el mismo que se usa en Muticore-II/UnAMIGA, pero en la versión de Victor Trucco, con una sóla SD en modo de acceso SPI 3V3, el modelo de tener microcontroladores o SBCs en el futuro es válido para futuros SHIELD MULTICORE que puedan aparecer con esta interconexión, al incorporar de esta forma la unión FPGA-SD-MICRO FPGA-SD-SBC, estamos en un puro derivado de MiST.
 
 De hecho con el tiempo Victor trucco ha ido agregando más funcionalidad MiST a su versión con bluepill.
 
 En este caso he colocado el mismo diseño que se ha usado en máquinas retro-fpga como,Multicore-II, UnAMIGA, Prototipos PEGASO & CENTAURO, Y las Retrofpga de más capacidad UnAMIGA-Reloaded y NePTUNO, puede que con eL añadido de VGA64 muchos cores de poca profundidad de color sean portables.
 
 Como reservé 2 pines para un modo 4bit en SD, este se puede desarrollar con la BLACKPILL en la opción del chip más avanzado F411.
-La bluepill esta desarrollada por victor trucco con una sóla sd cuando creó el Multicore II, en este caso usaremos una única SD en modo SPI.
-En la blackpill se plantea el usar el formato SD de 4bit sólo la opción más cara de las BLACKPILL posée SDIO de 1Bit, 4Bit U 8Bits -> SDIO.
+Hay por ahora tres modelos de BLACKPILL la BLACKPILL que posée SDIO de 1Bit, 4Bit u 8Bits -> SDIO es el STM32F411CEU6.
 
 ## Pineado bluepill
 
@@ -32,7 +31,7 @@ BLACKPILL -> STM32F411CEU6
 
 ![PINEADO BLACKPILL](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/Pinout-Diagram.png)
 
-Nota: para posicionar correctamente los pines usamos mayúsculas para la blackpill, y minúsculas para la bluepill.
+Nota: para posicionar correctamente los pines usamos mayúsculas para la BLACKPILL, y minúsculas para la bluepill.
 
 ## Dimensiones que compraten las STM32 usadas, a tener en cuenta de la bluepill y la BLACKPILL:
 ![DIMENSIONES](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/Dimesiones_BLUEPILL.jpg)
@@ -45,9 +44,11 @@ Avance del esquema multicore STM32:
 
 ![PRIMERA VERSIÓN SHIELD MULTICORE STM32](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/SHIELD_IO_BOARD_ATLAS_STM32_BLACKPILL_bluepill_MKR.png)
 
-Al usar la elevación de las hembras apilables actua el montaje "I/O BOARD ATLAS y LA SHIELD STM32" como si tuviéramos más capas, me queda la duda de si en BLUEPILL se puedieran cortar los pines asociados en la parte macho de las hembras apilables apoderándose de las señales R14_SD_DATA2 y P14_SD_DATA1, agregando 2 señales a esta opción de Multicore con bluepill, estoy planteado en el futuro agregar esta opción de robar pines a la FPGA incorporando 4 señales a un nuevo diseño opcional, que sería hacer la captura también de los pines de AUDIO, y tendríamos 4 pines de la FPGA, lo que permite conectar desde Dispositivos SPI, I2S, 2 canales I2C, TX RX con gestión de bflujo -> Acceso a internet.
+Al usar la elevación de las hembras apilables, el montaje "I/O BOARD ATLAS y LA SHIELD STM32" nos dá más capas, me queda la duda de si en la bluepill se puedieran cortar los pines asociados en la parte macho de las hembras apilables apoderándose de las señales R14_SD_DATA2 y P14_SD_DATA1 así como el AUDIO_L y T12_LEFT_MKR R11_RIGHT_MKR, agregando 4 señales a esta opción de Multicore con bluepill, estoy planteado en el futuro agregar esta opción de robar pines a la FPGA incorporando 4 señales a un nuevo diseño opcional, lo que permite conectar desde Dispositivos SPI, I2S, 2 canales I2C, TX RX con gestión de bflujo -> Acceso a internet.
 
 Si se guardan los pines cortados iniciando el diseño con el bluepill y en el futuro se desarrollara una opción viable con SDIO 4Bit en BLACKPILL, no es muy dificil volver a soldarlos donde se realizó el corte, o directamente no usar ese tipo de hembras apilables en el conector de audio -> poner simples hembras, y hacer lo mismo en DATA1 y DATA2, y ya se veria como colocar pads normalmente abiertos o cerrados para que una misma placa permita obtener pines de fpga.
 
-Mi opción inicial es que se puedan manejar más componentes hardware.
+Aunque gestionando la compra de placas bien podía costearse una placa para bluepill + 4Señales, y BLACHPILL modelo F411.
+
+Mi opción inicial es que se puedan manejar más componentes hardware, y unificar la placa sin agregar más que conectores cortar o soldar pistas en los pad indicados.
 
