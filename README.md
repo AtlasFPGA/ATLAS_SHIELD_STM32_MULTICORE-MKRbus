@@ -35,3 +35,5 @@ En la blackpill se plantea el usar el formato SD de 4bit -> SDIO.
 Avance del esquema multicore STM32:
 ![Diagrama multicore STM32](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/AVANCE_ESQUEM%C3%81TICO_SHIELD_MULTICORE_STM32.png)
 
+# NOTA: PI_TX y PI_RX pasarán as ser lineas de selección del modelo heredado por el Multicore II de Victor trucco.
+
