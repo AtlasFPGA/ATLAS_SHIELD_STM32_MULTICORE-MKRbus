@@ -2,6 +2,12 @@
 
 Primera versión del SHIELD para I/O BOARD ATLAS, válido para todas las atlas se usan los pines usados en los shiedl de arduino para tener el multicore basado en stm32.
 
+![Hembra apilable](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/Pines_hembras_apilables.png)
+
+Enlace cabezales hembra apilable:
+https://es.aliexpress.com/item/4000059515638.html?pdp_npi=2%40dis%21EUR%211%2C16%E2%82%AC%211%2C06%E2%82%AC%21%21%21%21%21%40211b440316861499958111903e1e40%2110000000140557195%21btf&_t=pvid%3Af4806f4c-de05-4d23-908d-d920b1f8ac6d&afTraceInfo=4000059515638__pc__pcBridgePPC__xxxxxx__1686149996&spm=a2g0o.ppclist.product.mainProduct&gatewayAdapt=glo2esp
+
+
 Las STM32 que se han usado son 2 modelos para un único recolocador:
 
 ## Pineado bluepill
