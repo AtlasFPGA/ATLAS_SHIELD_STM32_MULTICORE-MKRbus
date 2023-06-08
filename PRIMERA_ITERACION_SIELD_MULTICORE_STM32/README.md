@@ -1,2 +1,2 @@
-# ESP32-DEVKIT-V1-Fpga-Relocator
-PCB for plug a ESP32 DEV KIT V1 on MKR bus for use Atlas resources
+# Documentos del proyecto kicad asociado al SHIELD MULTICORE STM32
+STM32 Multicore STM32 for plug a bluepill or BLACKPILL with CYC1000 in MKR bus for sxpand the use of Atlas resources
