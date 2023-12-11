@@ -2,6 +2,8 @@
 
 Primera versión del SHIELD MULTICORE STM32 MKRbus para I/O BOARD ATLAS, válido para todas las "I/O BOARD ATLAS" incluidas las "AKA NEPTUNE" se usan las hembras apiladas que normalmente se usan en los shield de arduino, para tener el multicore basado en STM32.
 
+Group ATLAS in Telegram: https://t.me/INICIATIVAATLAS
+
 ![Hembra apilable](https://github.com/AtlasFPGA/ATLAS_SHIELD_STM32_MULTICORE-MKRbus/blob/main/FOTOS/Pines_hembras_apilables.png)
 
 Enlace cabezales hembra apilable:
